@@ -34,7 +34,7 @@ A smart Chrome Extension that allows users to ask questions and get instant answ
 3. Install dependencies
      pip install -r requirements.txt
 
-⚙️ Load the Extension in Chrome
+# ⚙️ Load the Extension in Chrome
 
     Go to chrome://extensions/
     Enable Developer mode
