@@ -22,17 +22,18 @@ A smart Chrome Extension that allows users to ask questions and get instant answ
 ### 🔧 Setup
 
 1. Clone the repo:
-   
-   git clone https://github.com/aayush-5/QnA-x-ChromeExtension.git
-   cd QnA-x-ChromeExtension
+
+- git clone https://github.com/aayush-5/QnA-x-ChromeExtension.git
+- cd QnA-x-ChromeExtension
    
 2. Create a virtual environment
 
-    python -m venv venv
-    venv/bin/activate  # For Linux/Mac
+- python -m venv qa_venv
+- qa_venv\Scripts\activate
 
 3. Install dependencies
-     pip install -r requirements.txt
+
+- pip install -r requirements.txt
 
 # ⚙️ Load the Extension in Chrome
 
