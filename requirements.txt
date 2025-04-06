@@ -3,30 +3,14 @@ uvicorn
 tqdm
 requests
 beautifulsoup4
-
-# LangChain Core
 langchain
 langchain-core
-
-# OpenAI Integratclion
-langchain-openai
-openai
-
-# Anthropic Integration
-langchain-anthropic
-
-# Google Gemini (PaLM) Integration
-langchain-google-genai
-google-generativeai
-
-# Hugging Face Integration
+langchain-community
 langchain-huggingface
 transformers
 huggingface-hub
-
-# Environment Variable Management
 python-dotenv
-
-# Machine Learning Utilities
 numpy
 scikit-learn
+faiss-cpu
+langchain-ollama

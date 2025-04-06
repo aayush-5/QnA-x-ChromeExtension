@@ -25,7 +25,7 @@ app = FastAPI()
 # Enable CORS so frontend (Chrome extension) can access backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, set to your extension's origin
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -43,7 +43,7 @@ cached_vectorstores = {}
 @app.post("/api/send_url")
 async def send_url(payload: URLPayload):
     url = payload.url
-    print(f"🔗 Received URL: {url}")
+    print(f"Received URL: {url}")
 
     try:
         # Load page
@@ -59,7 +59,7 @@ async def send_url(payload: URLPayload):
 
 
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"Error: {str(e)}")
         return {"error": str(e)}
 
 
@@ -67,7 +67,7 @@ async def send_url(payload: URLPayload):
 async def ask_question(payload: QuestionPayload):
     url = payload.url
     question = payload.question
-    print(f"❓ Question received: '{question}' for {url}")
+    print(f"Question received: '{question}' for {url}")
 
     try:
         # Check cache
@@ -93,5 +93,5 @@ async def ask_question(payload: QuestionPayload):
         return {"answer": answer}
 
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"Error: {str(e)}")
         return {"error": str(e)}

@@ -6,7 +6,7 @@ document.getElementById("sendBtn").addEventListener("click", async () => {
 
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab || !tab.url) {
-    status.innerText = "❌ No active tab.";
+    status.innerText = "No active tab.";
     return;
   }
 
@@ -21,13 +21,13 @@ document.getElementById("sendBtn").addEventListener("click", async () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      status.innerText = "✅ Page parsed. Ask your question!";
+      status.innerText = "Page parsed. Ask your question!";
       document.getElementById("qaSection").style.display = "block";
       addMessage("bot", "Page loaded! Ask me anything about it.");
     })
     .catch((err) => {
       console.error(err);
-      status.innerText = "❌ Error parsing page.";
+      status.innerText = "Error parsing page.";
     });
 });
 
@@ -46,7 +46,7 @@ document.getElementById("askBtn").addEventListener("click", async () => {
   });
 
   const data = await res.json();
-  addMessage("bot", data.answer || "❌ Error getting answer");
+  addMessage("bot", data.answer || "Error getting answer");
   document.getElementById("questionInput").value = "";
 });
 
