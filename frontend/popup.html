@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Q&A</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 10px; width: 300px; }
+      button, input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+        margin: 5px 0;
+        width: 100%;
+      }
+      #chat { margin-top: 10px; max-height: 150px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; }
+      .msg { margin-bottom: 8px; }
+      .user { font-weight: bold; }
+      .bot { color: green; }
+    </style>
+  </head>
+  <body>
+    <h3>Webpage Q&A</h3>
+    <button id="sendBtn">Parse Current Page</button>
+    <p id="status"></p>
+
+    <div id="qaSection" style="display:none;">
+      <input type="text" id="questionInput" placeholder="Ask something about this page..." />
+      <button id="askBtn">Ask</button>
+      <div id="chat"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
